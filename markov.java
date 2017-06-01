@@ -5,8 +5,8 @@ public class Main {
 	public static Main m = new Main();
 
 	public boolean numberControl(double matrix[][]) {
-		int column = matrix.length;
-		int row = matrix[0].length;
+		int row = matrix.length;
+		int column = matrix[0].length;
 		boolean result = true;
 
 		for (int i = 0; i < column; i++) {
@@ -21,8 +21,8 @@ public class Main {
 
 	public boolean valControl(double matrix[][]) {
 
-		int column = matrix.length;
-		int row = matrix[0].length;
+		int row = matrix.length;
+		int column = matrix[0].length;
 		boolean result = false;
 		int counter = 0;
 		double total = 0.0;
