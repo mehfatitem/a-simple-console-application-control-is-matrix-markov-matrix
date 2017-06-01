@@ -11,7 +11,7 @@ public class Main {
 
 		for (int i = 0; i < column; i++) {
 			for (int j = 0; j < row; j++) {
-				if (matrix[i][j] <= 0)
+				if (matrix[i][j] < 0)
 					result = false;
 			}
 		}
