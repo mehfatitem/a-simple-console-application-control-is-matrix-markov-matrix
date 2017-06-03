@@ -7,9 +7,13 @@ public class MarkovMatrix implements InterfaceMarkovMatrix {
 		double[][] matrix = new double[][] { { 0.0, 0.5, 0.2 }, { 0.3, 0.1, 0.7 }, {0.7, 0.4, 0.1 } };
 
 		if (this.validMatrix(matrix))
-			System.out.println("Markov matrisidir.");
+			this.print("Markov matrisidir.");
 		else
-			System.out.println("Markov matrisi degildir.");
+			this.print("Markov matrisi degildir.");
+	}
+	
+	private void print(Object text) {
+		System.out.println(text);
 	}
 	
 	@Override
@@ -28,7 +32,7 @@ public class MarkovMatrix implements InterfaceMarkovMatrix {
 					result = false;
 			}
 		}
-
+		
 		return result;
 	}
 
@@ -48,7 +52,7 @@ public class MarkovMatrix implements InterfaceMarkovMatrix {
 				total += matrix[j][i];
 				total = Math.round(total * 1e4) / 1e4;
 			}
-
+			
 			if (total == 1.0)
 				counter++;
 
@@ -57,6 +61,7 @@ public class MarkovMatrix implements InterfaceMarkovMatrix {
 
 			total = 0.0;
 		}
+		
 
 		return result;
 	}
@@ -64,9 +69,6 @@ public class MarkovMatrix implements InterfaceMarkovMatrix {
 	@Override
 	public boolean validMatrix(double matrix[][]) {
 		
-		if (this.numberControl(matrix) && this.valControl(matrix))
-			return true;
-		else
-			return false;
+		return this.numberControl(matrix) && this.valControl(matrix);
 	}
 }
