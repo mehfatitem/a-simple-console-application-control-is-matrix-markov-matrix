@@ -9,8 +9,8 @@ public class Main {
 		int column = matrix[0].length;
 		boolean result = true;
 
-		for (int i = 0; i < column; i++) {
-			for (int j = 0; j < row; j++) {
+		for (int i = 0; i < row; i++) {
+			for (int j = 0; j < column; j++) {
 				if (matrix[i][j] < 0)
 					result = false;
 			}
@@ -27,8 +27,8 @@ public class Main {
 		int counter = 0;
 		double total = 0.0;
 
-		for (int i = 0; i < column; i++) {
-			for (int j = 0; j < row; j++) {
+		for (int i = 0; i < row; i++) {
+			for (int j = 0; j < column; j++) {
 				total += matrix[j][i];
 				total = Math.round(total * 1e4) / 1e4;
 			}
